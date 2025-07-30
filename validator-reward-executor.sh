@@ -15,7 +15,7 @@ if echo "$total $claimed" | awk '{exit !($1 <= $2)}'; then
   exit 1
 fi
 
-claimable=$(( total - claimed ))
+claimable=$(echo "$total - $claimed" | bc)
 cast send $VALIDATOR_REWARD_MANAGER "claim(address,address,uint256,bool)" \
   $VALIDATOR_REWARD_OWNER $VALIDATOR_REWARD_RECIPIENT $claimable true \
   --private-key $VALIDATOR_EXECUTOR_PVK \
