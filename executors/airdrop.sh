@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-source <(grep -v '^#' "./.env.flr" | sed -E 's|^(.+)=(.*)$|: ${\1=\2}; export \1|g')
+source <(grep -v '^#' "./.env" | sed -E 's|^(.+)=(.*)$|: ${\1=\2}; export \1|g')
 
 month=$1
 

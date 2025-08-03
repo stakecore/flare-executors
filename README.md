@@ -5,4 +5,4 @@ The repository contains bash scripts for Flare/Songbird validator and fsp reward
 - run `apt-get install bc jq curl`,
 - copy `.env.template` to `.env`,
 - fill the missing `.env` values,
-- run `bash fsp-reward-executor.sh` or `bash validator-reward-executor.sh`.
+- run any executor in the `executors` folder with bash.
